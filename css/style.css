@@ -1,0 +1,116 @@
+@font-face {
+    font-family: Akaya;
+    src: url(../font/AkayaKanadaka.ttf);
+}
+@font-face {
+    font-family: Zain;
+    src: url(../font/Zain.ttf);
+}
+:root{
+    --bg-color: #F2F6D0;
+    --main-text-color: #443627;
+    --secondary-text-color: #D98324;
+}
+body{
+    background-color: var(--bg-color);
+    font-family: Zain, sans-serif;
+    color: var(--main-text-color);
+    font-size: 1.3em;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    background: var(--bg-color);
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--secondary-text-color);
+    border-radius: 10px;
+    border-radius: 3px;
+}
+/* ######################################## */
+
+h1{
+    font-family: Akaya;
+    font-weight: bold;
+    font-size: 3.5em;
+    margin-block: 0.5em;
+    color: var(--main-text-color);
+    text-align: center;
+
+    img{
+        width: 50px;
+    }
+}
+h2{
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+.content-container{
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 40%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--secondary-text-color);
+}
+.table-container{
+    width: 40%;
+    position: relative;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%);
+}
+.table{
+    --bs-table-bg: transparent !important;
+}
+.waiting-container{
+    text-align: center;
+    width: 40%;
+    position: fixed;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+
+    img{
+        width: 200px;
+    }
+    h3{
+        color: var(--secondary-text-color);
+    }
+}
+@media screen and (max-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-container{
+        position: static;
+        width: 90%;
+        transform: none;
+        margin: auto;
+    }
+    .table-container{
+        position: static;
+        width: 90%;
+        transform: none;
+        margin: 20px auto;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .waiting-container{
+        display: none;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bookmarker</title>
+  </head>
+
+  <body>
+    <h1>Bookmarker <img src="img/logo.png" alt="logo" /></h1>
+
+    <section
+      class="content-container d-flex flex-column justify-content-center "
+    >
+      <h2 class="text-center">Bookmark your favorite websites</h2>
+
+      <div class="mb-3">
+        <label for="siteName" class="form-label">
+          <i class="fa-solid fa-bookmark"></i> site name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="siteName"
+          placeholder="Google"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="SiteURL" class="form-label"
+          ><i class="fa-solid fa-link"></i> Site URL</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="SiteURL"
+          placeholder="www.google.com"
+        />
+      </div>
+      <button class="btn btn-warning align-self-center" onclick="getData()">Submit</button>
+    </section>
+
+    <section class="table-container d-none d-flex flex-column" id="tableContainer">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">visit</th>
+            <th scope="col">delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+      <button class="btn btn-danger align-self-center mb-4" onclick="deleteAll()">Delete All</button>
+    </section>
+
+    <section id="NoData" class="waiting-container">
+      <img src="img/waiting.png" alt="waiting" />
+      <h3>Waiting for your bookmarks...</h3>
+      <p>Bookmark your favorite websites to see them here.</p>
+    </section>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
