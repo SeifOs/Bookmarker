@@ -23,7 +23,7 @@ function getData() {
   tableContainer.classList.remove("d-none");
   NoData.classList.add("d-none");
   displayData();
-  // clearInputs();
+  clearInputs();
 }
 function displayData() {
   var temp = ``;
